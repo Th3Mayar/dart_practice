@@ -56,13 +56,13 @@ Make sure you have Dart installed on your machine. You can download it from the 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-repo/vehicle-project.git
+   https://github.com/dart_practice/vehicle-project.git
    ```
 
 2. Navigate into the project directory:
 
    ```bash
-   cd vehicle-project
+   cd dart_practice
    ```
 
 3. Run the project:
