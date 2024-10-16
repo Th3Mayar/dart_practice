@@ -1,0 +1,13 @@
+analyzer:
+  strong-mode:
+    implicit-dynamic: false
+  language:
+    enableSuperMixins: true
+  errors:
+    missing_required_param: error
+  additional-strong-mode-options:
+    - implicit-casts
+  resolvers:
+    custom:
+      source_uri: "src"
+include: package:lints/recommended.yaml
