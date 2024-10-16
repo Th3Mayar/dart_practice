@@ -86,7 +86,7 @@ vehicle.drive();  // Output: Driving a car.
 
 ### Utility Functions
 
-The project contains a utility function in `string_utils.dart` to handle case-insensitive comparisons. It converts any string to lowercase before checking the type of vehicle:
+The project contains a utility function in `functions.dart` to handle case-insensitive comparisons. It converts any string to lowercase before checking the type of vehicle:
 
 ```dart
 String toLower(String input) {
@@ -110,29 +110,5 @@ void main() {
 If an unsupported type is provided, the constructor throws an error:
 
 ```dart
-Vehicle unknownVehicle = Vehicle('bike');  // Throws 'Vehicle type not found'
-```
-
-## Adding New Vehicle Types
-
-To add a new type of vehicle, follow these steps:
-
-1. Create a new Dart file for the vehicle class (e.g., `Bicycle.dart`).
-2. Implement the `Vehicle` abstract class and provide the implementation for the `drive()` method.
-3. Modify the factory constructor in `Vehicle.dart` to handle the new vehicle type.
-
-Example for adding a `Bicycle`:
-
-```dart
-class Bicycle implements Vehicle {
-  @override
-  void drive() {
-    print('Riding a bicycle.');
-  }
-}
-
-// Add to Vehicle factory:
-if (type == 'bicycle') {
-  return Bicycle();
-}
+Vehicle unknownVehicle = Vehicle('motorbike');  // Throws 'Vehicle type not found'
 ```
