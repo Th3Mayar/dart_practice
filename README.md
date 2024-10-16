@@ -14,7 +14,7 @@ This project demonstrates the use of Dart's object-oriented programming features
 ## Project Structure
 
 ```plaintext
-my_project/
+dart_practice/
 ├── lib/
 │   ├── src/
 │   │   ├── models/
