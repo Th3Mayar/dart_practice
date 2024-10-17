@@ -1,6 +1,11 @@
 import 'dart:io';
 import '../models/Dolphin.dart' show Dolphin;
 import '../models//Vehicles.dart' show Vehicle;
+import '../utils//waitForUser.dart' show waitForUser;
+import '../models//Employee.dart' show Employee;
+import '../models//Person.dart' show Person;
+import '../models//Animal.dart' show Dog;
+import '../widgets/divider.dart' show divider, lineBreak;
 
 // Enum to represent the days of the week
 enum WeekDay { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
@@ -12,10 +17,51 @@ extension evenNumber on int {
   }
 }
 
-void main() {
-  print('Enter a number:');
+void dividerSpace() {
+  waitForUser();
+  lineBreak();
+}
 
+void exercises() {
+  // Create an instance of Person
+  print("Person Information:");
+  Person person = Person('Jose', 'Perez', 25);
+  print(person.toString()); // Displays the person's details
+  divider(symbol: "═", length: 40);
+  dividerSpace();
+
+  // Create an instance of Employee
+  print("Employee Information:");
+  Employee employee = Employee('Jose', 'Perez', 25, 'Engineer');
+  print(employee.toString()); // Displays the person's details
+  divider(symbol: "═", length: 40);
+  dividerSpace();
+
+  // Classes Animals
+  Dog myDog = Dog('Luna', 55);
+  print('Dog name: ${myDog.name}, Age: ${myDog.age}');
+  myDog.eat();
+  waitForUser();
+
+  // Create an instance of Dolphin and call eat
+  print("Dolphin Actions:");
+  Dolphin dolphin = Dolphin();
+  dolphin.eat();
+  waitForUser();
+
+  // Create and use the Vehicle class
+  print("Vehicle Actions:");
+  Vehicle vehicle = Vehicle('vehicle');
+  vehicle.drive(); // Result is: Driving an auto.
+
+  // Create and use the motorbike instance
+  Vehicle myMotor = Vehicle('motorbike');
+  myMotor.drive(); // Result is: Driving a motorbike.
+  waitForUser();
+
+  print('Enter a number:');
   int? number = int.tryParse(stdin.readLineSync() ?? '');
+  waitForUser();
 
   if (number == null) {
     print('Please enter a valid number.');
@@ -27,15 +73,9 @@ void main() {
     }
   }
 
-  // Create a list of days of the week
-  Dolphin dolphin = Dolphin();
-  dolphin.eat();
-  dolphin.eat();
+  waitForUser();
+}
 
-  // Use the extension method
-  Vehicle vehicle = Vehicle('vehicle');
-  vehicle.drive(); // Result is: Driving an auto.
-
-  Vehicle myMotor = Vehicle('motorbike');
-  myMotor.drive(); // Result is: Driving a motorbike.
+void main() {
+  exercises();
 }
