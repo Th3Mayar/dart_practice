@@ -1,6 +1,6 @@
 import 'Vehicles.dart' show Vehicle;
 
-// Class Auto.dart
+// Class Car extends Vehicle
 class Car implements Vehicle {
   @override
   void drive() {

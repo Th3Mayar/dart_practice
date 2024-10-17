@@ -1,3 +1,4 @@
+// Define a class Person to resolve exercise with name and age
 class Person {
   String name;
   String lastName;

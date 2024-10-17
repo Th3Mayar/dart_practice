@@ -1,13 +1,11 @@
+// With class Person, create class Employee extend by Person
+
 import './Person.dart' show Person;
 
 class Employee extends Person {
   String cargo;
 
-  Employee(
-      {required String name,
-      required String lastName,
-      required int age,
-      required this.cargo})
+  Employee(String name, String lastName, int age, this.cargo)
       : super(name, lastName, age);
 
   @override
